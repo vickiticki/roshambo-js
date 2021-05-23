@@ -11,6 +11,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: antiquewhite;
 }
 header {
   text-align: center;
@@ -34,8 +35,12 @@ section {
 
 button {
   margin-bottom: 10px;
+  font-size: 16px;
+  background-color: rgb(223, 138, 184);
 }
-
+.start button {
+  background-color: rgb(38, 160, 38);
+}
 .player1 {
   display: flex;
   position: fixed;
@@ -64,15 +69,19 @@ button {
 }
 
 .hide {
-  visibility: hidden;
+  display: none;
 }
 
 .p1Image {
-  height: 100px;
-  width: auto;
+  width: 250px;
+  height: auto;
 }
 
 .p2Image {
-  height: 100px;
-  width: auto;
+  width: 250px;
+  height: auto;
+}
+
+.rules img {
+  border-radius: 50px;
 }

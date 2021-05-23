@@ -5,7 +5,7 @@ let over = false
 
 function render() {
   const html = `    <header>
-  <h1>Rock Paper Scissors</h1>
+  <h1>Rock Paper Scissors Lizard Spock</h1>
 </header>
 
 <main>
@@ -22,7 +22,7 @@ function render() {
   </section>
 
   <section class="winner message">
-    <h2></h2>
+    <h2>Basic Rules</h2>
     <div class="rules of game">
       <img
         src="images/Rock_paper_scissors_lizard_spock.png"
