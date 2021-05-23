@@ -12,6 +12,7 @@ function makeChoice1(event) {
   if (choiceClicked.classList.contains('rock')) {
     p1 = 'rock'
     console.log(p1)
+
     if (p2 != 'notPicked') {
       choicesMade()
     }
@@ -102,10 +103,11 @@ function makeChoice2(event) {
 
 function choicesMade() {
   over = true
+
   console.log(p1 + ' vs ' + p2)
   if (p1 === p2) {
     console.log('Draw!')
-    document.querySelector('.winner h2').textContent = winner
+    document.querySelector('.winner h2').textContent = 'Draw!'
     return
   }
   if (
@@ -114,39 +116,39 @@ function choicesMade() {
   ) {
     console.log('Player 1 won!')
     winner = 'player1'
-    document.querySelector('.winner h2').textContent = winner
+    document.querySelector('.winner h2').textContent = 'Player One Wins!'
   } else if (
     (p1 === 'paper' && p2 === 'rock') ||
     (p1 === 'paper' && p2 === 'spock')
   ) {
     console.log('Player 1 won!')
     winner = 'player1'
-    document.querySelector('.winner h2').textContent = winner
+    document.querySelector('.winner h2').textContent = 'Player One Wins!'
   } else if (
     (p1 === 'rock' && p2 === 'scissors') ||
     (p1 === 'rock' && p2 === 'lizard')
   ) {
     console.log('Player 1 won!')
     winner = 'player1'
-    document.querySelector('.winner h2').textContent = winner
+    document.querySelector('.winner h2').textContent = 'Player One Wins!'
   } else if (
     (p1 === 'lizard' && p2 === 'paper') ||
     (p1 === 'lizard' && p2 === 'spock')
   ) {
     console.log('Player 1 won!')
     winner = 'player1'
-    document.querySelector('.winner h2').textContent = winner
+    document.querySelector('.winner h2').textContent = 'Player One Wins!'
   } else if (
     (p1 === 'spock' && p2 === 'rock') ||
     (p1 === 'spock' && p2 === 'scissors')
   ) {
     console.log('Player 1 won!')
     winner = 'player1'
-    document.querySelector('.winner h2').textContent = winner
+    document.querySelector('.winner h2').textContent = 'Player One Wins!'
   } else {
     console.log('Player 2 won!')
     winner = 'player2'
-    document.querySelector('.winner h2').textContent = winner
+    document.querySelector('.winner h2').textContent = 'Player Two Wins!'
   }
 }
 
