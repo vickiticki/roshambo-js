@@ -27,6 +27,10 @@ section {
   justify-content: space-around;
   justify-items: right;
 }
+h1 {
+  font-family: fantasy;
+  font-size: 36px;
+}
 
 .buttons {
   display: flex;
