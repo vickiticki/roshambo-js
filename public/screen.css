@@ -47,3 +47,8 @@ button {
   position: fixed;
   right: 3rem;
 }
+
+.winner {
+  display: flex;
+  text-align: center;
+}
