@@ -18,6 +18,7 @@ function render() {
       <button class="lizard">Lizard</button>
       <button class="spock">Spock</button>
     </div>
+    <img class="p1Image hide" src="images/rock.jpg" />
   </section>
 
   <section class="winner message">
@@ -39,6 +40,7 @@ function render() {
       <button class="lizard">Lizard</button>
       <button class="spock">Spock</button>
       </div>
+      <img class="p2Image hide" src="images/rock.jpg" />
       </section>
       </main>
       <div class="start over">
@@ -52,6 +54,7 @@ function render() {
 
   document.querySelector('.over').addEventListener('click', resetGame)
 }
+
 function makeChoice1(event) {
   const choiceClicked = event.target
   if (over === true) {
@@ -153,6 +156,17 @@ function makeChoice2(event) {
 function choicesMade() {
   over = true
 
+  document.querySelector('.p1').classList.add('hide')
+  document.querySelector('.p1Image').classList.remove('hide')
+  document.querySelector('.p1Image').src = `images/${p1}.jpg`
+
+  document.querySelector('.p2').classList.add('hide')
+  document.querySelector('.p2Image').classList.remove('hide')
+  document.querySelector('.p2Image').src = `images/${p2}.jpg`
+  document.querySelector('.rules').classList.add('hide')
+
+  // create p1Image and pick src based on p1 choice
+
   console.log(p1 + ' vs ' + p2)
   if (p1 === p2) {
     console.log('Draw!')
@@ -210,6 +224,7 @@ function resetGame(event) {
     p2 = 'notPicked'
     winner = 'nope'
     document.querySelector('.winner h2').textContent = ''
+    render()
   }
 }
 

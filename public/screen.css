@@ -62,3 +62,17 @@ button {
   position: fixed;
   bottom: 4rem;
 }
+
+.hide {
+  visibility: hidden;
+}
+
+.p1Image {
+  height: 100px;
+  width: auto;
+}
+
+.p2Image {
+  height: 100px;
+  width: auto;
+}
