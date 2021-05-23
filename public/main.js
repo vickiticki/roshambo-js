@@ -84,9 +84,22 @@ function choicesMade() {
   }
 }
 
+function resetGame(event) {
+  const startOver = event.target
+
+  if (startOver.classList.contains('reset')) {
+    p1 = 'notPicked'
+    p2 = 'notPicked'
+    winner = 'nope'
+    document.querySelector('.winner h2').textContent = ''
+  }
+}
+
 function main() {}
 document.querySelector('.p1').addEventListener('click', makeChoice1)
 
 document.querySelector('.p2').addEventListener('click', makeChoice2)
+
+document.querySelector('.over').addEventListener('click', resetGame)
 
 document.addEventListener('DOMContentLoaded', main)
