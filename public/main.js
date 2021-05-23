@@ -3,6 +3,55 @@ let p2 = 'notPicked'
 let winner = 'nope'
 let over = false
 
+function render() {
+  const html = `    <header>
+  <h1>Rock Paper Scissors</h1>
+</header>
+
+<main>
+  <section class="player1">
+    <h2>Player One</h2>
+    <div class="p1 buttons">
+      <button class="rock">Rock</button>
+      <button class="paper">Paper</button>
+      <button class="scissors">Scissors</button>
+      <button class="lizard">Lizard</button>
+      <button class="spock">Spock</button>
+    </div>
+  </section>
+
+  <section class="winner message">
+    <h2></h2>
+    <div class="rules of game">
+      <img
+        src="images/Rock_paper_scissors_lizard_spock.png"
+        alt="Rules of game. Rock beats scissors and lizard. Paper beats rock and Spock. Scissors beat paper and lizard. Lizard beats Spock and paper. Spock beats scissors and rock."
+      />
+    </div>
+  </section>
+
+  <section class="player2">
+    <h2>Player Two</h2>
+    <div class="p2 buttons">
+      <button class="rock">Rock</button>
+      <button class="paper">Paper</button>
+      <button class="scissors">Scissors</button>
+      <button class="lizard">Lizard</button>
+      <button class="spock">Spock</button>
+      </div>
+      </section>
+      </main>
+      <div class="start over">
+      <button class="reset button">Play Again</button>
+      </div>`
+
+  document.body.innerHTML = html
+  document.querySelector('.p1').addEventListener('click', makeChoice1)
+
+  document.querySelector('.p2').addEventListener('click', makeChoice2)
+
+  document.querySelector('.over').addEventListener('click', resetGame)
+}
 function makeChoice1(event) {
   const choiceClicked = event.target
   if (over === true) {
@@ -164,11 +213,8 @@ function resetGame(event) {
   }
 }
 
-function main() {}
-document.querySelector('.p1').addEventListener('click', makeChoice1)
-
-document.querySelector('.p2').addEventListener('click', makeChoice2)
-
-document.querySelector('.over').addEventListener('click', resetGame)
+function main() {
+  render()
+}
 
 document.addEventListener('DOMContentLoaded', main)
